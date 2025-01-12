@@ -1,0 +1,13 @@
+<div class="register-form">
+  <div class="card-price">
+    <p *ngIf="data?.price || group?.price" style="font-size: 1rem; text-align: center;">
+      <strong>Price:</strong> From
+      <span class="price">
+        {{ routeType === 'group' && group?.price ? group?.price : (data?.price || 'Price not available') }} €
+      </span>
+    </p>
+    <hr>
+  </div>
+  <p><strong>Send an Inquiry</strong></p>
+  <app-input-field [formFields]="formFields" (formSubmitted)="onFormSubmit($event)"></app-input-field>
+</div>

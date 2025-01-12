@@ -1,0 +1,26 @@
+h1
+{
+  position:relative;
+  transform: translateY(-50%);
+  color: #FFF;
+}
+.text-center{
+  background-color:#FFF;
+  background-color: #FFF;
+  border-radius: 25px;
+  box-shadow: 5px 5px 5px rgba(0,0,0,.1);
+  overflow: hidden;
+  width: 90%;
+  height: 100%;
+}
+.text{
+  color: black;
+  font-size: 30px;
+}
+.luxor{
+  background-image: url(	https://hurghadaonlinetours.net/wp-content/uploads/2022/09/luxor-temple-scaled.jpg);
+  height: 100%;
+      background-size: cover;
+    background-attachment: fixed;
+}
+

@@ -1,0 +1,17 @@
+.navbar a {
+  font-size: large;
+  font-weight: 500;
+  color: black; /* Set a default color */
+}
+
+.navbar a:hover {
+  color: #fe6519;
+  cursor: pointer; /* Change color on hover */
+}
+ .header{
+  background-color: #FE6519;
+
+}
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}

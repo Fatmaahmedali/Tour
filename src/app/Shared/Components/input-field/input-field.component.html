@@ -1,0 +1,29 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="inquiry-form">
+  <div class="row">
+    <div *ngFor="let field of formFields"[ngClass]="{'col-md-4': field.name === 'title','col-md-8': field.name === 'fullname','col-md-6': ['adults', 'kids', 'arrival', 'departure'].includes(field.name)}">
+      <div [ngClass]="{ 'form-group': true, 'has-error': submitted && f[field.name].invalid }">
+        <label [for]="field.name">{{ field.label }}</label>
+        <ng-container [ngSwitch]="field.type">
+          <input *ngSwitchCase="'text'" type="text" formControlName="{{ field.name }}" class="form-control" />
+          <input *ngSwitchCase="'email'" type="email" formControlName="{{ field.name }}" class="form-control" />
+          <input *ngSwitchCase="'number'" type="number" formControlName="{{ field.name }}" class="form-control" />
+          <input *ngSwitchCase="'date'" type="date" formControlName="{{ field.name }}" class="form-control" />
+          <input *ngSwitchCase="'tel'" type="tel" formControlName="{{ field.name }}" class="form-control" />
+          <textarea *ngSwitchCase="'textarea'" formControlName="{{ field.name }}" class="form-control"></textarea>
+          <select *ngSwitchCase="'select'" formControlName="{{ field.name }}" class="form-control">
+            <option *ngFor="let option of field.options" [value]="option">{{ option }}</option>
+          </select>
+        </ng-container>
+        <div *ngIf="submitted && f[field.name].invalid" class="error-message">
+          <div *ngIf="f[field.name].errors?.['required']">
+            {{ field.validationErrorMessage || 'This field is required.' }}
+          </div>
+          <div *ngIf="f[field.name].errors?.['email']">Please enter a valid email address.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group text-center">
+    <button type="submit" >Submit</button>
+  </div>
+</form>

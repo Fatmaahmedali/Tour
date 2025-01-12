@@ -1,0 +1,26 @@
+<div class="About" style="margin-top: 5%;">
+  <div class="container">
+  <div class="row flex">
+  <div class="col-md-6">
+  <div ><img src="https://static.vecteezy.com/system/resources/previews/002/967/753/non_2x/traveling-vacation-design-illustration-with-cartoon-style-vector.jpg" alt="" style="width: 70%;"></div></div>
+  <div class="col-md-6" >
+      <span style="color:#FE6519; font-weight: 500;" >What They Say</span>
+      <h2  style="font-weight: 700;font-size: 1.9rem;padding-top: 20px;">What Our Customers<br>Say About Us</h2>
+        <p-carousel [value]="feedbacks" [numVisible]="1" [numScroll]="1" [circular]="false"  [showIndicators]="false" [autoplayInterval]="3000" class="custom-carousel">
+          <ng-template let-product pTemplate="item">
+            <div class="border-1 surface-border border-round m-2 p-3">
+                <div class="mb-3 font-medium">
+                  <p>{{product.Feedback}}</p>
+                  <span style="font-weight: 700;font-size: 1.1rem;">{{product.name}}</span>
+                </div>
+                <div class=" flex justify-content-center" style="color: #FE6519;">
+                  <p-rating [(ngModel)]="value" [readonly]="true" [cancel]="false" class="rating"></p-rating>
+              </div>
+            </div>
+        </ng-template>
+        </p-carousel>
+  </div>
+</div>
+</div>
+</div>
+

@@ -1,0 +1,66 @@
+
+.app-navbar {
+  color: #FE6519;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background-color: #EDEEF1;
+}
+.nav-link {
+  transition: background-color 0.9s ease; /* Smooth transition */
+}
+.nav-link:hover {
+  color: #FE6519;
+  border-bottom: 4px solid #FE6519;
+}
+.app-tab-link.active{
+  color: #FE6519;
+}
+.navbar-nav{
+   list-style-type: none;
+    display: flex;
+    border-bottom: 1px solid #98a2ae;
+    background-color: #edeef1;
+    overflow-x: auto;
+    margin-right: 20px;
+    font-size: 1.5rem;
+    padding-right: 35px;
+}
+.active a {
+    color: #FE6519;
+    border-bottom: 4px solid #FE6519;
+}
+.navbar-nav::-webkit-scrollbar {
+  height: 8px;
+}
+.navbar-nav::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.navbar-nav::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.navbar-nav::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@media screen and (max-width: 750px) {
+  .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+  }
+  .nav-link {
+    font-size: 1.2rem;                 
+    padding: 0.5rem 1rem;
+  }
+  .collapse.navbar-collapse {
+    display: block;
+    overflow: hidden;
+  }
+  .active a {
+    color: #FE6519;
+    border-bottom: none;
+}
+}

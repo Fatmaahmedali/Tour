@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row py-4">
+    <div
+    *ngFor="let value of Travelpackage"
+    [ngClass]="{'col-md-6': currentRoute === '/home','col-md-4': currentRoute !== '/home'}"style="padding-bottom: 25px;">
+      <div class="card shadow product-card">
+            <a class="nav-link" [routerLink]="value.id ? (routeType === 'data' ? ['/details', value.id] : ['/group', value.id]) : ['/group', value.id]">
+          <div class="card-img-container" style="background-color: #192F47;">
+            <div class="hover hover-2 text-white rounded hover-zoom" >
+              <img [src]="value.image" class="w-100 h-200 border-round" style="object-fit: cover; border-radius: 20px 20px 0 0; height: 350px;">
+            </div>
+          </div>
+          <div class="card-body  relative">
+            <div class="overlay-text">
+              <h3 style="font-weight: 700; font-size: 25px;" >{{value.title}}</h3>
+              <p>{{ truncateDescription(value.description, 20) }}</p>
+              <button class="btn btn-primary custom-button">Read me</button>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    </div>
+  </div>

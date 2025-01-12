@@ -1,0 +1,24 @@
+<div class="border-1 surface-border border-round m-2 text-center card-wrapper">
+  <div class="card shadow product-card ">
+    <div class="card-img-container">
+      <div class="card-image-wrapper">
+        <div class="hover hover-2 text-white rounded hover-zoom">
+          <div class="mb-3 card-image-wrapper position-relative" style="overflow: hidden;">
+              <a class="nav-link" [routerLink]="element.id ? (routeType === 'data' ? ['/details', element.id] : ['/group', element.id]) : ['/group', element.id]">
+              <img [src]="element.image" class="card-image w-100 border-round" style="border-radius: 20px 20px 0 0; object-fit: cover; height: 70%;" />
+              <div class="image-overlay">
+              <h6>{{element.title}}</h6>
+              <span class="overlay-days">{{element.Days}}</span>
+              <strong><span class="overlay-price" style="font-size: 25px;">{{element.price}} €</span></strong>
+            </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <p class="text">{{ truncateDescription(element.description, 20) }}</p>
+      <button class="btn btn-primary custom-button" (click)="onclick($event)">Read me</button>
+    </div>
+  </div>
+</div>

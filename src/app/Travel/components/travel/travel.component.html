@@ -1,0 +1,11 @@
+<app-bread></app-bread>
+<div class="container" *ngIf="!loading; else loadingTemplate">
+  <div class="row py-4">
+    <div *ngFor="let item of group" class="col-md-4" style="padding-bottom: 25px;">
+      <app-snorkeling [element]="item" [routeType]="'group'"></app-snorkeling>
+    </div>
+  </div>
+</div>
+<ng-template #loadingTemplate>
+  <app-spinner></app-spinner>
+</ng-template>

@@ -1,0 +1,22 @@
+<app-bread></app-bread>
+<div class="container" *ngIf="!loading; else loadingTemplate">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card">
+        <p [innerHTML]="dynamicText" class="formatted-text"></p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="register-form">
+        <h4>For reservations or inquiries</h4>
+        <app-input-field
+          [formFields]="formFields"
+          (formSubmitted)="onFormSubmit($event)">
+        </app-input-field>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #loadingTemplate>
+  <app-spinner></app-spinner>
+</ng-template>

@@ -1,0 +1,5 @@
+<p-carousel [value]="products" [numVisible]="Number" [numScroll]="3" [circular]="false" [responsiveOptions]="responsiveOptions" [autoplayInterval]="3000" [showIndicators]="false" class="custom-carousel">
+  <ng-template pTemplate="item" let-product>
+    <app-snorkeling [element]="product"></app-snorkeling>
+  </ng-template>
+</p-carousel>

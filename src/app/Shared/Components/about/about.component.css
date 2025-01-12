@@ -1,0 +1,39 @@
+.card{
+  padding: 25px;
+  border-radius: 25px;
+  box-shadow: 5px 5px 5px rgba(0,0,0,.1);
+  overflow: hidden;
+}
+.register-form{
+  padding: 10px 15px;
+    background-color: #FFF;
+    border: 2px solid #FE6519;
+    margin-bottom: 25px;
+}
+.row{
+  margin-top: 25px;
+}
+.formatted-text {
+  white-space: pre-line;
+  margin-bottom: 1em;  /* Adjust the space between lines */
+  padding-top: 10px;
+}
+button{
+  background-color: #FE6519;
+  color: #FFF;
+  border-radius: 30px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 15px;
+  padding: 0 20px;
+  border: none;
+
+}
+button:hover{
+  background-color: #192f47;
+}
+@media screen and (max-width: 750px) {
+  .register-form {
+    margin-top: 25px;
+  }
+}

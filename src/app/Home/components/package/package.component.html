@@ -1,0 +1,46 @@
+<div class="container" >
+  <h1 class="text" style="text-align: center; font-weight: 600; margin-bottom: 25px;">Cairo Tours From Hurghada</h1>
+  <div class="row" style="margin-bottom: 5%;">
+    <div class="col-md-8">
+      <app-tour-carousel [products]="neww" [responsiveOptions]="responsiveOptions" [Number]="2"></app-tour-carousel>
+    </div>
+    <div class="col-md-4">
+      <img src="https://hurghadaonlinetours.net/wp-content/uploads/2022/09/landing-slider-img-1-1.png" style="margin-right: 20%; width:100%">
+    </div>
+  </div>
+</div>
+<div class="luxor" >
+  <div class="container">
+  <h1 class="text" style="text-align: center; font-weight: 600; padding-top: 150px; color: #fff;">Luxor Tours From Hurghada</h1>
+  <div class="row" style="margin-bottom: 15%;">
+    <div class="col-md-12" style="margin-top: 10px;">
+      <app-tour-carousel [products]="luxor" [responsiveOptions]="responsiveOptions" [Number]="3"></app-tour-carousel>
+    </div>
+    </div>
+  </div>
+</div>
+  <h1 class="text" style="text-align: center; font-weight: 600; padding-top: 105px; ">Hurghada Sea trips & Snorkeling</h1>
+<div class="row" style="margin-bottom: 5%;">
+  <div class="col-md-12">
+    <div class="container">
+  <app-tour-carousel [products]="snorkeling" [responsiveOptions]="responsiveOptions" [Number]="3"></app-tour-carousel>
+</div>
+  <img src="https://hurghadaonlinetours.net/wp-content/uploads/2022/09/diver_PNG22.png" alt="" style="width: 30%;position: absolute;bottom:0;left: 0;z-index: -1;">
+</div>
+  </div>
+  <h1 class="text" style="text-align: center; font-weight: 600; ">Hurghada Desert Safari</h1>
+<div class="row" style="margin-bottom: 5%;">
+  <div class="col-md-12">
+    <div class="container">
+  <app-tour-carousel [products]="Desert" [responsiveOptions]="responsiveOptions" [Number]="3"></app-tour-carousel>
+</div>
+  <img src="https://hurghadaonlinetours.net/wp-content/uploads/2022/09/visuel_loisirs-1.png" alt="" style="width: 30%;position: absolute;bottom:0;left: 0;z-index: -1;">
+</div>
+  </div>
+<div class="bg-white">
+  <h1 class="text" style="text-align: center; font-weight: 600; padding-top:80px ;">Egypt Travel Packages </h1>
+  <div class="row justify-content-center ">
+  <div class="col-md-6 " style="width: 100%; text-align: center;">
+  <app-travel-package [Travelpackage]="package"></app-travel-package></div></div>
+  <app-feedback [feedbacks]="Paragraph"></app-feedback>
+</div>

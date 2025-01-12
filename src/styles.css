@@ -1,1 +1,106 @@
-/* You can add global styles to this file, and also import other style files */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  height: 100%;
+  max-width: 100%;
+}
+body {
+  font-family: Cairo, sans-serif;
+  color: #192f47;
+  background-color: #edeef1;
+  box-sizing: border-box;
+}
+.p-carousel .p-carousel-prev,
+.p-carousel .p-carousel-next {
+  color: #FE6519 !important;
+  width: 40px;
+  height: 40px;
+  background-color: #FFF;
+  border: 2px solid #FE6519;
+  border-radius: 50%;
+  padding: 0;
+  position: absolute;
+  font-size: 25px;
+  z-index: 1;
+  bottom: 2px;
+}
+.p-carousel .p-carousel-prev:hover,
+.p-carousel .p-carousel-next:hover {
+  background-color: #FE6519 !important;
+  cursor: pointer;
+  color: #FFF !important;
+}
+.p-carousel .p-carousel-prev {
+  left: 48%;
+  transform: translateX(-100%);
+}
+.p-carousel .p-carousel-next {
+  left: 50%;
+  transform: translateX(0);
+}
+.p-carousel .p-carousel-content {
+  margin-bottom: 60px;
+}
+.luxor .p-carousel-prev,
+.luxor .p-carousel-next {
+  color: #FFF !important;
+  width: 40px;
+  height: 40px;
+  background-color: #FE6519;
+  border: 2px solid #FE6519;
+  border-radius: 50%;
+  padding: 0;
+  position: absolute;
+  font-size: 25px;
+  z-index: 1;
+  top: 0%;
+}
+.luxor .p-carousel-prev:hover,
+.luxor .p-carousel-next:hover {
+  background-color: #FFF !important;
+  cursor: pointer;
+  color: #FE6519 !important;
+}
+.luxor .p-carousel-prev {
+  left: 0%;
+  transform: translateX(-100%);
+}
+.luxor .p-carousel-next {
+  left: 100%;
+  transform: translateX(0);
+}
+.luxor .p-carousel-content {
+  margin-bottom: 60px;
+}
+.custom-button,
+button {
+  background-color: #fe6519;
+  color: white;
+  border-radius: 30px;
+  padding: 10px 20px;
+  border: none;
+  transition: all 0.3s ease;
+}
+.custom-button:hover,
+button:hover {
+  background-color: #192f47;
+  cursor: pointer;
+}
+.card-wrapper:hover .custom-button {
+  background-color: #192f47;
+  cursor: pointer;
+}
+.card-image-wrapper {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  background-color: #192f47;
+}
+@media screen and (max-width: 480px) {
+  body {
+    display: block !important;
+    width: 100% !important;
+  }
+}

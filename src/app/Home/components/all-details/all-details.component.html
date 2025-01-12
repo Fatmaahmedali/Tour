@@ -1,0 +1,21 @@
+
+<app-bread></app-bread>
+<div *ngIf="!loading; else loadingTemplate">
+ <ng-container *ngFor="let route of routeData" >
+   <div *ngIf="currentRoute === route.path" class="container" >
+      <div class="row justify-content-center">
+        <div class="col-md-4" style="width:100%;">
+         <div *ngIf="para && para.length" style="background-color:#fff; font-size: 1rem; line-height: 2.2rem; padding: 15px; border-radius: 25px; margin-top: 25px;">
+           <h2 *ngIf="para[0]" [innerHTML]="para[route.titleKey]?.title"></h2>
+           <p [innerHTML]="para[route.titleKey]?.item"></p>
+         </div>
+          <app-travel-package [Travelpackage]="getDataForRoute(route.data)" [routeType]="'data'"></app-travel-package>
+       </div>
+     </div>
+   </div>
+ </ng-container>
+ <div style="background-color: #fff;padding-top: 25px;"><app-feedback [feedbacks]="Paragraph"></app-feedback></div>
+</div>
+ <ng-template #loadingTemplate>
+  <app-spinner></app-spinner>
+</ng-template>

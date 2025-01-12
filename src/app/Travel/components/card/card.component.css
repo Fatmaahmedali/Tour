@@ -1,0 +1,39 @@
+.card{
+  width: 40%;
+  height: 0%;
+  text-align: center;
+  margin-right: 25px;
+  background-color: #fff;
+  border-radius: 25px;
+  box-shadow: 5px 5px 5px rgba(0,0,0,.1);
+  overflow: hidden;
+}
+.fa-solid{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #63CFE4;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: white;
+}
+.text-details{
+  font-weight: 700;
+}
+.moredetails{
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 750px) {
+  .moredetails {
+    display: block;
+  }
+  .card {
+    text-align: center;
+    margin-top: 25px;
+    width: 100%;
+  }
+}

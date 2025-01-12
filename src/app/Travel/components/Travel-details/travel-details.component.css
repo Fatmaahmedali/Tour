@@ -1,0 +1,72 @@
+
+.mb-4{
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    font-weight: 700;
+    border-left: 4px solid #FE6519;
+    padding-left: 15px;
+    margin: 15px 0;
+}
+main {
+  margin-top: 20px;
+}
+span{
+  color: #fff;
+}
+.customer-accordion ::ng-deep.p-accordion-header{
+background-color: #FFF;
+}
+.customer-accordion ::ng-deep.p-accordion-header-link{
+ text-decoration: none;
+}
+.customer-accordion ::ng-deep span{
+  color:#FE6519
+}
+.customer-accordion ::ng-deep.p-accordion-toggle-icon{
+  position: absolute;
+  right: 25px;
+  color: black;
+}
+.custom ::ng-deep .p-carousel-prev,
+.custom ::ng-deep .p-carousel-next {
+  color: #FE6519 !important;
+  width: 40px;
+  height: 40px;
+  background-color: #FFF;
+  border-radius: 50%;
+  font-size: 25px;
+  bottom: 300px;
+}
+.custom ::ng-deep .p-carousel-prev:hover,
+.custom ::ng-deep .p-carousel-next:hover {
+  background-color: #FE6519 !important;
+  cursor: pointer;
+  color: #FFF !important;
+}
+.customer-accordion ::ng-deep.p-accordion-content{
+  border-radius: 25px;
+  border-left: 4px solid #FE6519;
+}
+::ng-deep ul{
+  list-style: none;
+}
+::ng-deep li i{
+  color: #FE6519;
+}
+.Intenary::ng-deep img{
+  width: 100%;
+  height: 50%;
+ }
+::np-deep .size-full {
+  width: 100%;
+}
+ @media screen and (max-width: 750px) {
+  .register-form {
+    margin-top: 25px;
+  }
+  p-card ::ng-deep img{
+    width: 90%;
+    background-color: aqua;
+   }
+}
+

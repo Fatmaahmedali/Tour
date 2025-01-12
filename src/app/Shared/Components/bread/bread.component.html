@@ -1,0 +1,21 @@
+
+<div class="text" style="width: 100%; height: 40%; position: relative; background-image: url('{{ image }}'); background-size: cover; background-position: center">
+  <div class="overlay">
+    <h1 class="head" *ngIf="!title; else titleBreadcrumb" style="font-size: 3rem; line-height: 2.5rem; font-weight: bold;">
+      {{ value[1]?.label }}
+    </h1>
+    <ng-template #titleBreadcrumb>
+      <h1 class="head" style="font-size: 3rem; line-height: 2.5rem; font-weight: bold;">
+        {{ title }}
+      </h1>
+    </ng-template>
+    <div class="flex justify-content-center breadcrumb-container">
+      <p-breadcrumb
+        class="custom-breadcrumb"
+        [model]="value"
+        [home]="home"
+        (onItemClick)="onBreadcrumbClick($event)">
+      </p-breadcrumb>
+    </div>
+  </div>
+</div>
